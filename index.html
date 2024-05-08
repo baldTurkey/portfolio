@@ -7,6 +7,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+<link href="https://fonts.cdnfonts.com/css/graffiti-font" rel="stylesheet">
+                
 
 
 <title>
@@ -32,7 +34,7 @@
           <a href="#about" class="nav__link">About</a>
         </li>
         <li class="nav__item">
-          <a href="#contact" class="nav__link">Contact</a>
+          <a href="#contact" class="nav__link" id = "contact-link">Contact</a>
         </li>
       </ul>
     </nav>
@@ -45,7 +47,8 @@
       </h1>
       <!-- Put a small paragraph about yourself -->
       <p>Welcome to my portfolio website!</p>
-      <a href="#contact" class="btn btn--pink">Get in touch</a>
+      <button class="button flash" id="getintouch">Get in Touch</button>
+
       
     </div>
   </div>
@@ -74,8 +77,15 @@
               <li>InDesign</li>
               
             </ul>
+          
+
+
+
             
-            <img src="assets/clearview_front.png"  id="gifImage" class="work__image" alt="Booklet">
+            <img class="work__image" src="assets/clearview_front.png" alt="Booklet Page">
+                
+              
+            
 
             </div>
           </div>
@@ -99,25 +109,7 @@
           </div>
         </div>
 
-        <div class="work__box">
-          <div class="work__text">
-            <h3>Longisquama Animation</h3>
-            <p>
-              Animation made for paleantology about dinosaurs
-            </p>
-            <ul class="work__list">
-              <li>Blender</li>
-              <li>Premire Pro</li>
-            </ul>
-
-          
-               
-              </a>
-              <a href="#">
-                <img src="./images/github.svg" class="work__code" title="View Source Code" alt="GitHub">
-              </a>
-              <video width="320" height="240" autoplay muted>
-                <source src="assets/Longisquama.mp4" type="video/mp4">
+       
       </div>
     </div>
   </section>
@@ -131,32 +123,23 @@
   <section class="about" id="about">
     <div class="row">
       <h2>About Me</h2>
-      <div class="card">
-        <!--------------><!--------------><!-------------->
-        <div class="circle" style="--clr:#F28D00;">
-          <img src=".png" class="logo">
-        </div>
-        <div class="content">
-          <h2>Shorya Miglani</h2>
-          <p>Hi I'm Shorya!
-          </p>
-          <a href="#">My Resume</a>
-        </div>
-        <img src="assets/me.jpg" class="product_img">
+
+      <div class="about-description">
+        <p>Hi I am Shorya, I am based in Boston and Dartmouth, I do software development, fullstack development, currently in my Sophomore Year at University of Massachusetts Dartmouth. You should click the orange circle its cool. Take my survey to give me feedback: </p>
+    </div>
+    <div class="about-photo">
+        <img src="assets/me.jpg" alt="A photo of me">
+    </div>
+    <a href="assets/Resume_port.pdf" download="assets/Resume_port.pdf" class="download-button">Download Resume</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSd7TAZbRo6pf5RqF1p5IbcZsiwpjvTbQHCDY_vNXjRlkp2LbQ/viewform?usp=sf_linkf" class="download-button">Survay!</a>
       </div> <!-------------->
       <div class="about__content">
         <div class="about__text">
-          <!-- Replace the below paragraph with info about yourself -->
-          <p>
-            I am Shorya!
-          </p>
-          <!-- Provide a link to your resume -->
-          <a href="assets/Resume_port.pdf" class="btn" download>My Resume</a>
+        
         </div>
 
         <div class="about__photo-container">
-          <!-- Add a nice photo of yourself -->
-          <img class="about__photo" src="./images/syed-ali-hussnain.jpg" alt="" />
+         
         </div>
       </div>
     </div>
@@ -170,7 +153,7 @@
     <h2>Get in Touch</h2>
     <div class="contact__info">
       <p>
-        put business card here
+        &nbsp
       </p>
 
       <div class="logo-container">
@@ -186,9 +169,9 @@
 
         </a>
     </div>
-</div>
 
-</a>
+
+
 
     <div class="contact-info Orbitron">
         <div class="contact-item">

@@ -19,6 +19,8 @@
     src: url('./fonts/Jost-Regular.ttf') format('woff');
 }
 
+
+
 * {
     margin: 0;
     padding: 0;
@@ -132,6 +134,8 @@ h3 {
 }
 
 .heading-primary {
+    font-family: 'Graffiti font', sans-serif;
+    font-size: 10px;
     line-height: 1;
     font-size: var(--font-size-huge);
     font-weight: 400;
@@ -409,8 +413,8 @@ body:not(.user-is-tabbing) a:focus {
 .header {
    
     justify-content: space-between;
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/header.jpg');
+    background: linear-gradient(rgba(0,0,0, .1), rgba(0, 0, 0, 0.902)), 
+        url('/assets/pusk.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -582,7 +586,11 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .contact {
-    background-color: azure;
+    
+    height: 800px;
+    background-image: url('assets/bottom_end.png');
+    background-size: cover; 
+    background-position: center; 
 }
 
 .contact__info {
@@ -591,14 +599,20 @@ body:not(.user-is-tabbing) a:focus {
 
 
 .github-logo {
-    width: 250px;
+    width: 200px;
     height: auto;
+    margin-left: 250px;
+    margin-top: 330px;
+   
  
     
   }
   
   .linkdn-logo {
-    width: 300px;
+    margin-left: 650px;
+    margin-top: 30px;
+    margin-bottom: -500px;
+    width: 250px;
     height: auto;
     
   }
@@ -611,21 +625,21 @@ body:not(.user-is-tabbing) a:focus {
   
   .github-logo, .linkdn-logo {
     display: flex;
-    flex-direction: row;
+    
   }
   
   .contact-info {
-    
+    margin-left: 200px; 
     position: absolute;
-    left: 60px;
-    
+    left: 80px;
+    margin-top: 250px;
     display: flex;
     flex-direction: column;
     gap: 5px;
   }
   
   .contact-info span {
-    font-size: 35px !important;
+    font-size: 25px !important;
   }
   
   .contact-item {
@@ -635,13 +649,13 @@ body:not(.user-is-tabbing) a:focus {
   }
   
   .contact-item img {
-    width: 80px; /* Adjust size as needed */
+    width: 50px; /* Adjust size as needed */
     height: auto;
   }
   
   .contact-item span {
     font-weight: 500;
-    font-size: 8px; /* Adjust size as needed */
+    font-size: 17px; /* Adjust size as needed */
     color: #000000; /* Adjust color as needed */
   }
   
@@ -651,42 +665,7 @@ body:not(.user-is-tabbing) a:focus {
 /* ----- Footer ----- */
 /* --------------------------------------- */
 
-.footer {
-    text-align: center;
-    padding: var(--gutter-medium) 0 var(--gutter-normal);
-}
 
-.footer__social-links {
-    display: flex;
-    justify-content: center;
-    padding: var(--gutter-normal) 0;
-    list-style: none;
-}
-
-.footer__social-link-item:not(:last-of-type) {
-    margin-right: var(--gutter-small);
-}
-
-.footer__social-image {
-    height: 4rem;
-}
-
-.footer__github-buttons {
-    display: flex;
-    justify-content: center;
-}
-
-.footer__github-buttons iframe {
-    height: 2.5rem;
-    width: 84px;
-    transform: translateY(3px);
-}
-
-@media(max-width: 500px) {
-    .footer {
-        padding: var(--gutter-medium) 0;
-    } 
-}
 
 
 
@@ -715,120 +694,117 @@ body:not(.user-is-tabbing) a:focus {
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    background-position: 45px right;
+    background-position: 50px right;
 }
 
 
 
 
 
-.card {
-    position: relative;
-    width: 350px;
-    height: 370px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s;
-    transition-delay: 0.5s;
-    margin-left: 350px;
-  }
-  .card:hover {
-    width: 600px;
-    transition-delay: 0.5s;
-  }
-  .card .circle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .card .circle::before {
-    content: "";
-    position: absolute;
-    top: 30;
-    left: 2;
-    right: 2;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: #F28D00;
-    border: 8px solid var(--clr);
-    filter: drop-shadow(0 0 10px var(--clr)) drop-shadow(0 0 60px var(--clr));
-    transition: 0.5s, background 0.5s;
-    transition-delay: 0.75s, 1s;
-  }
-  .card:hover .circle::before {
-    transition-delay: 0.5s;
-    width: 900%;
-    height: 100%;
-    border-radius: 20px;
-    background: var(--clr);
-  }
-  .card .circle .logo {
-    position: relative;
-    width: 250px;
-    transition: 0.5s;
-    transition-delay: 0.5s;
-  }
-  .card:hover .circle .logo {
-    transform: scale(0);
-    transition-delay: 0s;
-  }
-  .card .product_img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0) rotate(315deg);
-    height: 300px;
-    transition: 0.5s ease-in-out;
-  }
-  .card:hover .product_img {
-    transition-delay: 0.75s;
-    top: 55%;
-    left: 82%;
-    height: 320px;
-    transform: translate(-50%, -50%) scale(1) rotate(15deg);
-  }
-  .card .content {
-    position: absolute;
-    width: 60%;
-    left: 10%;
-    padding: 20px 20px 20px 20px;
-    opacity: 0;
-    transition: 0.5s;
-    visibility: hidden;
-  }
-  .card:hover .content {
-    transition-delay: 0.75s;
-    opacity: 1;
-    visibility: visible;
-    left: 3px;
-    margin-top: 15px;
-  }
-  .card .content h2 {
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 2em;
-    line-height: 1.3em;
-  }
-  .card .content p {
-    color: #fff;
-  }
-  .card .content a {
-    position: relative;
-    color: #fff;
-    background: #222222;
-    padding: 10px 20px;
-    border-radius: 10px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* About Me Section Styles */
+.about-section {
+    background-color: #ffccff; /* Light purple background color */
+    padding: 60px 0; /* Add some padding for spacing */
+    text-align: center; /* Center align the content */
+}
+
+.about-content {
+    max-width: 800px; /* Limit the width of the content */
+    margin: 0 auto; /* Center align the content */
+}
+
+.about-content h2 {
+    font-size: 64px; /* Even larger font size for heading */
+    color: #ff69b4; /* Bright pink color for heading */
+    margin-bottom: 40px; /* Add more space below the heading */
+    text-shadow: 4px 4px 8px rgba(255, 105, 180, 0.7); /* Bigger and more playful text shadow */
+}
+
+.about-description {
+    font-size: 28px; /* Slightly larger font size for description */
+    color: #eb5d25; /* Dark color for description */
+    margin-bottom: 60px; /* Add even more space below the description */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.999);
+}
+
+.about-photo img {
+    max-width: 100%; /* Ensure the photo doesn't exceed its container */
+    border-radius: 50%; /* Make the photo round */
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.7); /* Even bigger and more playful pink shadow */
+    transition: transform 0.4s ease-in-out; /* Slightly slower transition on hover */
+}
+
+.about-photo img:hover {
+    transform: rotate(-8deg) scale(1.1); /* Rotate and scale the photo even more on hover */
+}
+
+
+
+
+/* Styling for the button */
+.button {
+    background-color: #ff7700; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 10px 20px; /* Padding for the button */
+    border-radius: 20px; /* Rounded edges */
+    border: none; /* Remove button border */
+    font-size: 30px; /* Font size for the button */
+    cursor: pointer; /* Cursor style */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Flashing animation for the button */
+@keyframes flash {
+    0% { background-color: #000000; }
+    50% { background-color: #635234; }
+    100% { background-color: #000000; }
+}
+
+/* Apply the flashing animation to the button */
+.button.flash {
+    animation: flash 1.5s infinite; /* Flashing animation */
+}
+  
+
+
+
+
+
+
+
+
+.download-button {
     display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff7700; /* Button background color */
+    color: white; /* Button text color */
     text-decoration: none;
-    font-weight: 600;
-    margin-top: 15px;
-  }
+    border-radius: 10px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.download-button:hover {
+    background-color: #ffae00; /* Change background color on hover */
+}
+  
+
   
